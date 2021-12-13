@@ -126,3 +126,24 @@ body{
 .settings + .result{
     padding-left: var(--page-padding);
 }
+
+/* ANY SETTINGS */
+.run-select-animation{
+    position: relative;
+    animation-duration: 0.5s;
+    animation-name: k-animation-select;
+}
+
+@keyframes k-animation-select {
+    0%{
+    }
+    10%{
+        border: 1px solid var(--fg-link-color);
+    }
+    50%{
+        border: 1px solid var(--fg-link-color);
+        box-shadow:  rgba(0, 0, 0, .05) 0 0 0px 4px, #4489eb83 0 0 0px 4px;
+    }
+    100%{
+    }
+}
