@@ -1,7 +1,7 @@
 const select_animation = "run-select-animation";
 // ? TAG Editor
-var tagEditor = exampleTagEditor
-var TagEditor_HasDoubles = document.getElementById("TagEditor_HasDoubles");
+const tagEditor = exampleTagEditor
+const TagEditor_HasDoubles = document.getElementById("TagEditor_HasDoubles");
 
 // For Reset tags
 function ResetTagEditor() {
@@ -22,7 +22,7 @@ TagEditor_HasDoubles.addEventListener('change', (e) => {
 });
 
 
-var TagEditor_ToLower = document.getElementById("TagEditor_ToLower");
+const TagEditor_ToLower = document.getElementById("TagEditor_ToLower");
 
 TagEditor_ToLower.addEventListener('change', (e) => {
     tagEditor.SToLower = e.target.checked;
@@ -30,9 +30,25 @@ TagEditor_ToLower.addEventListener('change', (e) => {
 });
 
 
-var TagEditor_MaxTags = document.getElementById("TagEditor_MaxTags");
+const TagEditor_MaxTags = document.getElementById("TagEditor_MaxTags");
 
 TagEditor_MaxTags.addEventListener('change', (e) => {
     tagEditor.SMaxTags = e.target.value;
     ResetTagEditor();
+});
+
+const TagEditorFormContainer = document.getElementById("TagEditorFormContainer");
+let TagEditorMethodRadioButtons = document.getElementsByName("TagEditorMethod");
+let TagEditorEndpoint_tb = document.getElementById("TagEditorEndpoint");
+
+TagEditorMethodRadioButtons.forEach((rb)=>{
+    rb.addEventListener('change', (e) => {
+        if (e.target.checked) {
+            TagEditorFormContainer.setAttribute("method", e.target.value);
+        }
+    })
+});
+
+TagEditorEndpoint_tb.addEventListener("change", (e) => {
+    TagEditorFormContainer.setAttribute("action", e.target.value);
 });
