@@ -60,6 +60,11 @@ class TagEditor {
                 this.Tb_Input.value = tagname + " ";
             }
         });
+        this.Tb_Input.addEventListener('focusout', (e) => {
+            let tagname = this.Tb_Input.value;
+            this.AddTag(tagname);
+            this.Tb_Input.value = '';
+        });
 
         // Add Tags
         this.AddTag(this.Tb_Input.value);
