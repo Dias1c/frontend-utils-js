@@ -28,6 +28,9 @@
     color: inherit;
     min-width: 50px;
     flex: 1;
+    
+    margin: 2px;
+    padding: 5px;
 }
 .textblock__input:focus,.textblock__input:hover, .textblock__input:active{
     border-color: #58a6ff;
