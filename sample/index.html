@@ -13,7 +13,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="helper.css" />
-    <link rel="stylesheet" href="./../src/css/default.css" />
+    <link rel="stylesheet" href="./../css/tag-editor.css" />
   </head>
 
   <body>
@@ -93,13 +93,13 @@
       <!-- <div class="container"></div> -->
     </div>
     <!-- JS -->
-    <script src="./../src/js/default.js"></script>
+    <script src="./../dist/main.js"></script>
     <script>
-      const exampleTagEditor = new TagEditor({
-        BlockSelectorName: "#b_TagEditor",
-        TextBlockSelectorName: "#tb_TagEditor",
-        Tags: ["tags", "html", "css", "js"],
-        MaxTagLength: 10,
+      const exampleTagEditor = new utils.TagEditor({
+        SelectorNameTagEditor: "#b_TagEditor",
+        SelectorNameOutput: "#tb_TagEditor",
+        DefaultTags: ["tags", "html", "css", "js"],
+        Separators: [" ", ",", ";"],
       });
     </script>
     <script src="./helper.js"></script>

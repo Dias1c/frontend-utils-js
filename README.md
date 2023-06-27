@@ -4,8 +4,23 @@ Here are long-invented tools for frontend on js
 
 ## How To Use?
 
-Copy js file in folder `src/js` wich you want (copy css to if you want default style), set for your project.
+Copy js file in folder `dist/main.js` wich you want (copy css to if you want default style), set for your project.
 
-> On files wich named `default` has all utils and styles.
+See usage example on [`sample/index.html`](./sample/index.html)
 
-Examples on `sample/index.html`
+## Customize and rebuild
+
+1. Before customize and build, install `node_modules` with this command
+
+```sh
+npm i
+```
+
+2. Source code of [`dist/main.js`](./dist/main.js) in `src` directory, customize if you want
+3. Build `main.js` from `src` with this command
+
+```js
+npm run build
+```
+
+4.  Use builded bundle on your html page (Do not forget copy styles in [`css`](./css) directory)
