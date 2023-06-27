@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons.flaticon.com/png/512/4413/premium/4413356.png?token=exp=1640090247~hmac=9a6ef0bb57447ebb6017ebe071e6cc23"
+      type="image/x-icon"
+    />
+    <title>🛠 Utils Example</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="helper.css" />
+    <link rel="stylesheet" href="./../src/css/default.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="container">
+        <h2>Tag Editor Example</h2>
+        <div class="example d-flex flex-row">
+          <form
+            class="result d-flex flex-column flex-1"
+            id="TagEditorFormContainer"
+            action="/"
+            method="GET"
+          >
+            <h6>B_TagEditor</h6>
+            <div class="textblock__input" id="b_TagEditor">
+              <input type="text" placeholder="..." value="input-value" />
+            </div>
+            <h6>Tb_input</h6>
+            <textarea
+              type="text"
+              name="tags"
+              class="s-disabled border-none"
+              id="tb_TagEditor"
+            ></textarea>
+            <!-- SENDER SETTIGNS Not Required -->
+            <div class="form-settings">
+              <h6>Form Send Settigns (for test)</h6>
+              <label>
+                <input
+                  type="radio"
+                  name="TagEditorMethod"
+                  value="GET"
+                  id="TagEditorMethodGET"
+                  checked
+                />
+                GET
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="TagEditorMethod"
+                  value="POST"
+                  id="TagEditorMethodPOST"
+                />
+                POST
+              </label>
+              <input
+                id="TagEditorEndpoint"
+                type="text"
+                value="/"
+                name="Endpoint"
+                placeholder="/YourTestEndpoint"
+              />
+              <button class="btn">Send</button>
+            </div>
+          </form>
+          <div class="settings d-flex flex-column flex-1">
+            <h6>Turned?</h6>
+            <label
+              ><input type="checkbox" id="TagEditor_HasDoubles" /> Has
+              Doubles</label
+            >
+            <label
+              ><input type="checkbox" id="TagEditor_ToLower" checked /> To
+              Lower</label
+            >
+            <h6>Max Tags</h6>
+            <input
+              type="number"
+              id="TagEditor_MaxTags"
+              placeholder="Zero is infinity"
+              value="0"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container"></div> -->
+    </div>
+    <!-- JS -->
+    <script src="./../src/js/default.js"></script>
+    <script>
+      const exampleTagEditor = new TagEditor({
+        BlockSelectorName: "#b_TagEditor",
+        TextBlockSelectorName: "#tb_TagEditor",
+        Tags: ["tags", "html", "css", "js"],
+        MaxTagLength: 10,
+      });
+    </script>
+    <script src="./helper.js"></script>
+  </body>
+</html>

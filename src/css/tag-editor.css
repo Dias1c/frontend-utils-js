@@ -1,0 +1,65 @@
+/* ?TAG EDITOR */
+/* TEXT BLOCK */
+.textblock__input {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: min-content;
+  resize: none;
+  overflow: hidden;
+
+  color: #ffffff;
+
+  border: 1px solid #21262d;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: #0d1117;
+}
+.textblock__input::placeholder {
+  color: rgba(240, 246, 252, 0.1);
+}
+.textblock__input > input {
+  box-sizing: inherit;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+  min-width: 50px;
+  flex: 1;
+
+  margin: 2px;
+  padding: 5px;
+}
+.textblock__input:focus,
+.textblock__input:hover,
+.textblock__input:active {
+  border-color: #58a6ff;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0px 4px, #388bfd26 0 0 0px 4px;
+}
+/* TAG */
+.btn-tag {
+  box-sizing: border-box;
+  display: flex;
+  width: max-content;
+  height: max-content;
+  background-color: #388bfd26;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 2px;
+
+  color: #58a6ff;
+}
+.btn-tag > .remove {
+  box-sizing: inherit;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.btn-tag > .remove:hover {
+  color: #388bfd26;
+}
+.btn-tag:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 100px 100px inset;
+}
