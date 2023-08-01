@@ -1,6 +1,8 @@
 # frontend-utils-js
 
-Here are long-invented tools for frontend on js
+**Demo is [here](https://dias1c.github.io/frontend-utils-js/sample/index.html).**
+
+Here are long-invented tools for frontend on js.
 
 ## How To Use?
 
